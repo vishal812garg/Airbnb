@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0ee053556c.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> 
+    <title>Document</title>
+</head>
+<body>
+
+ <!--Header-->  
+ <%- include('../views/Header.ejs'); %> 
+
+
+
+      <div class="mt-3"  style="width:70%; margin-left:210px; height:auto; margin-bottom: 70px;">
+
+                     <!--House Name-->    
+                     <h3><%=data.name%></h3>
+
+              <div class="d-flex justify-content-between">
+                 <!--place--> 
+                    <div>
+                         <p style="font-weight: bold;">
+                          <u><span><%=data.address.market%>,</span>
+                          <span><%=data.address.country%></span></u>
+                         </p>
+                    </div>
+
+
+                 <!--Share-->
+                 <!--Save-->   
+                    <div>
+                        <p  style="font-weight: bold;">
+                          <span><a href="" class="text-dark"><i class="fa-solid fa-arrow-up-from-bracket"></i></a></span>
+                          <span><a href="" class="text-dark"><u>Share</u></a></span>
+                          <span><a href="" class="text-dark"><i class="fa-regular fa-heart"></i></span> 
+                          <span><a href="" class="text-dark"><u>Save</u></a></span>
+                        </p>
+                    </div>
+
+            </div>
+
+            <!--House Image-->
+           <div class="mt-3">
+              <img class="rounded" style="width:100%; height: 450px;" src="<%=data.images.picture_url %>" alt="">
+           </div>
+                 
+                     <br><br> 
+                 
+                     
+            
+           <div class="d-flex justify-content-between">
+
+                <div style="width:60%;">
+
+                          <!--Host Nmae-->
+                          <!--Capacity of House & Apartment-->
+                            <div class="d-flex justify-content-between"> 
+                                <div> 
+                                      <h4>Private room hosted by <%=data.host.host_name%></h4>
+                                      <p>
+                                          <span>4 guests|</span>
+                                          <span>2 bedroom|</span>
+                                          <span>2 bed|</span>
+                                          <span>2 private bathroom</span>
+                                       </p>
+                                </div>
+
+                            <!--Host Image-->
+                                <div>
+                                    <a href="#"><img src="<%=data.host.host_picture_url%>" alt="" style="width: 60px;height: 60px;border-radius: 30px;"></a>
+                                </div>
+
+                            </div>
+
+                          <hr>
+
+
+
+                    <!---->
+                     <div>     
+
+                         <div class="d-flex justify-content-start">
+                              <div>
+                                   <span ><i class="fa-solid fa-person fa-xl"></i></span>    
+                              </div>
+                             
+                              <!--Superhost-->
+                              <div style="margin-left: 20px;">
+                                 <h5><%=data.host.host_name%> is a Superhost</h5>
+                                 <p>Superhosts are experienced, highly rated hosts who are committed to providing great stays for their guests.</p>
+                              </div>   
+
+                        </div>
+
+
+                        <div class="d-flex justify-content-start">
+                            <div>
+                                 <span><i class="fa-solid fa-location-dot fa-xl"></i></span>    
+                            </div>
+
+                            <!--Location-->
+                            <div style="margin-left: 20px;">
+                               <h5>Great location</h5>
+                               <p>100% of recent guests gave the location a 5-star rating.</p>
+                            </div>   
+
+                      </div>
+
+                          
+                        <div class="d-flex justify-content-start">
+
+                            <div>
+                                <span><i class="fa-solid fa-calendar-days fa-xl"></i></span>    
+                            </div>
+
+                            <!--Cancellation-->
+                            <div >
+                                 <h5 style="margin-left: 20px;">Free cancellation</h5>
+                             </div>   
+
+                         </div>
+
+                       </div>
+                       
+                       <hr>
+
+                  
+                            <!--aircover-->
+                            <h4 style="font-size:xx-large;"><span style="color: red;">air</span>cover</h4>   
+                            <p>Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.</p>        
+                            <a href="#" class="text-dark" style="font-weight: bold;"><u>Learn more</u></a> 
+                 
+                 
+                            <hr>
+
+
+                            <!---->
+                            <p><%=data.summary%></p>
+                            <a href="#" class="text-dark" style="font-weight:bold;"><u>Show more ></u></a>
+
+
+                            <hr>
+
+
+
+                           <!--Where will you sleep-->
+                            <h5>Where will you Sleep</h5>
+                            
+                            <!--Bedroom Detail-->
+                               <div class="d-flex justify-content-between">
+
+                                      <div>
+                                           <img src="<%=data.images.picture_url %>" alt="" style="width: 280px; height: 200px; border-radius: 10px;">
+                                           <p>
+                                               <span style="font-weight:bold;">Bedroom 1</span><br>
+                                               <span>1 double bed, 1 floor mattress</span> 
+                                           </p> 
+                                      </div>
+                                      
+                                      <div style="padding-right: 15px;">
+                                           <img src="<%=data.images.picture_url %>" alt="" style="width: 280px; height: 200px; border-radius: 10px;">
+                                           <p>
+                                               <span style="font-weight:bold;">Bedroom 2</span><br>
+                                               <span>1 double bed, 1 floor mattress</span> 
+                                           </p>
+                                      </div>
+                               </div>
+
+
+                               <hr>
+
+
+                               <!--What this place offers-->
+                               <h5>What this place offers</h5>
+
+                               
+                               <!--Basic Amenities-->
+                               <div class="d-flex justify-content-start">
+
+                                      <div>
+                                        
+                                           <p>
+                                              <span><i class="fa-solid fa-tv"></i></span>
+                                              <span>TV</span>
+                                           </p>
+
+                                           <p>
+                                               <span><i class="fa-solid fa-cable-car"></i></span>
+                                               <span>Cable TV</span>
+                                           </p>
+
+                                           <p>
+                                               <span><i class="fa-solid fa-globe"></i></span>
+                                               <span>Internet</span>
+                                           </p>
+
+                                           <p>
+                                               <span><i class="fa-solid fa-wifi"></i></span>
+                                               <span>Wifi</span>
+                                           </p>
+
+                                           <p>
+                                               <span><i class="fa-solid fa-fan"></i></span>
+                                               <span>Air conditioning</span>
+                                           </p>
+
+                                      </div>
+
+
+                                      <div style="margin-left: 30px;">
+                                         
+                                          <p>
+                                            <span><i class="fa-solid fa-wheelchair"></i></span>
+                                            <span>Buzzer/wireless intercom</span>
+                                          </p>
+
+                                        <p>
+                                            <span><i class="fa-sharp fa-solid fa-kitchen-set"></i></span>
+                                            <span>Kitchen</span>
+                                        </p>
+
+                                        <p>
+                                            <span><i class="fa-solid fa-car"></i></span>
+                                            <span>Car Parking</span>
+                                        </p>
+
+                                        <p>
+                                            <span><i class="fa-solid fa-user-large"></i></span>
+                                            <span>Washer</span>
+                                        </p>
+
+                                        <p>
+                                            <span><i class="fa-solid fa-dumbbell"></i></span>
+                                            <span>Gym</span>
+                                        </p>
+                                   </div>
+
+
+                               </div> 
+ 
+                               
+                               <hr>
+
+
+                </div>
+
+
+
+
+
+
+
+                 <!--Booking Form-->
+                <div class=" border rounded-xlg shadow-lg" style="width:38%;max-height: 400px;border-radius: 20px; position: sticky;top: 100px;">  
+
+                               
+                           <!--Night Price-->
+                           <h3 style="margin-top: 20px;margin-left: 30px;"><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>
+                            <%=data.price%> <span style="opacity: 0.5;">night</span></h3>
+
+
+
+                           <form action="/reserve"  style="margin: 5px;" name="myform" method="POST">
+
+                                   <div class="row d-flex justify-content-start mt-3">
+
+
+                                       <!--Check-In-->
+                                         <div class="col">
+                                               <label for="" style="font-size: larger;font-weight: bolder;color: red;">Check-In</label><br>
+                                               <input type="date" class="form-control form-control-lg example" name="birthday" id="birthday" required>
+
+                                         </div>
+                                         
+
+                                         <!--Check-Out-->
+                                         <div class="col">
+                                            <label for="" style="font-size: larger;font-weight: bolder;color: red;">Check-Out</label><br>
+                                            <input type="date" class="form-control form-control-lg example" name="birthday" id="birthday" required>
+
+                                         </div>
+
+                                   </div> 
+
+
+                                  <!--Guest--> 
+                                  <label for="sell" style="font-size: larger;font-weight: bolder;color: red;">Guest</label>
+                                   <select class="form-select form-select-lg" id="sell">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                  </select>
+
+                                  <!--Submit Button-->
+                                  <button type="submit" class="btn btn-danger mt-3" > Reserve</button>
+
+                           </form>
+
+
+                </div> 
+                
+           </div>
+
+      </div>
+
+
+      
+      <!--footer-->
+      <%- include('../views/Footer.ejs'); %>
+
+
+      <script>
+            
+           /* let Booking = function(){
+                let x = document.querySelectorAll(".example").value;
+
+                if(x == ""){
+                    alert("Please fill the form !");
+                }else{
+                    alert("Your Reservation has succesfull !");
+                }
+            }*/ 
+                 
+
+      </script>
+</body>
+</html>
